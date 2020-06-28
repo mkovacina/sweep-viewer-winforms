@@ -63,10 +63,16 @@
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.ViewerPanel = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.ScrubberPanel = new System.Windows.Forms.Panel();
+			this.trackBar1 = new System.Windows.Forms.TrackBar();
 			this.MenuStrip.SuspendLayout();
 			this.StatusStrip.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
+			this.ViewerPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.ScrubberPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// MenuStrip
@@ -337,19 +343,42 @@
 			// 
 			// ViewerPanel
 			// 
+			this.ViewerPanel.Controls.Add(this.pictureBox1);
 			this.ViewerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ViewerPanel.Location = new System.Drawing.Point(3, 3);
 			this.ViewerPanel.Name = "ViewerPanel";
 			this.ViewerPanel.Size = new System.Drawing.Size(946, 568);
 			this.ViewerPanel.TabIndex = 0;
 			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.InitialImage = null;
+			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(946, 568);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			// 
 			// ScrubberPanel
 			// 
+			this.ScrubberPanel.Controls.Add(this.trackBar1);
 			this.ScrubberPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.ScrubberPanel.Location = new System.Drawing.Point(3, 577);
 			this.ScrubberPanel.Name = "ScrubberPanel";
 			this.ScrubberPanel.Size = new System.Drawing.Size(946, 118);
 			this.ScrubberPanel.TabIndex = 1;
+			// 
+			// trackBar1
+			// 
+			this.trackBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.trackBar1.Location = new System.Drawing.Point(0, 0);
+			this.trackBar1.Name = "trackBar1";
+			this.trackBar1.Size = new System.Drawing.Size(946, 118);
+			this.trackBar1.TabIndex = 0;
 			// 
 			// SweepViewer
 			// 
@@ -366,6 +395,11 @@
 			this.StatusStrip.ResumeLayout(false);
 			this.StatusStrip.PerformLayout();
 			this.tableLayoutPanel1.ResumeLayout(false);
+			this.ViewerPanel.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.ScrubberPanel.ResumeLayout(false);
+			this.ScrubberPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -408,6 +442,8 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Panel ViewerPanel;
 		private System.Windows.Forms.Panel ScrubberPanel;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.TrackBar trackBar1;
 	}
 }
 
