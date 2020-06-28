@@ -1,0 +1,8 @@
+﻿2020-06-28
+
+this bring back memories of the diagnostics console.
+interesting comparing memories of Java/Swing to WinForms.
+it would be a fun historical dig to compare the state of WinForms/etc. are the time of the AWT/Swing creation.
+
+i am choosing on this first pass not to go down the rabbit hole of creating "components".
+not needed yet.
