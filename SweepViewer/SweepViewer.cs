@@ -12,14 +12,12 @@ namespace SweepViewer
 {
 	public partial class SweepViewer : Form
 	{
+		/// <summary>
+		/// The main viewer component
+		/// </summary>
 		public SweepViewer()
 		{
 			InitializeComponent();
-		}
-
-		private void pictureBox1_Click(object sender, EventArgs e)
-		{
-
 		}
 	}
 }
