@@ -15,7 +15,11 @@ namespace SweepViewer.Sources
 
 			initializeFromHeader();
 
-			CurrentFrame = new int[Rows,Columns];
+			CurrentFrame = new char[Rows][];
+			for (int row = 0; row < Rows; row++)
+			{
+				CurrentFrame[row] = new char[Columns];
+			}
 		}
 
 		private void initializeFromHeader()
@@ -41,12 +45,22 @@ namespace SweepViewer.Sources
 			NumberOfAgents = Int32.Parse(numberOfAgentsLine);
 		}
 
-		public int[,] CurrentFrame { get; }
+		public char[][] CurrentFrame { get; }
 
 		/// <inheritdoc />
 		public async Task MoveNextFrame()
 		{
-			await Task.CompletedTask;
+			for (int row = 0; row < Rows; row++)
+			{
+				// don't forget about the EOL character
+				// ReadLine handles this but doesn't take a buffer...
+				await reader.ReadBlockAsync(CurrentFrame[row]);
+				// handle the line ending
+				reader.Read();
+			}
+
+			//reader.ReadBlockAsync(CurrentFrame);
+			//await Task.CompletedTask;
 		}
 
 		public int Rows { get; private set; }
